@@ -7,10 +7,10 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-COPY ["Catalog/ShopDemo.Catalog.Api/ShopDemo.Catalog.Api.csproj", "ShopDemo.Catalog.Api/"]
-COPY ["Catalog/ShopDemo.Catalog.Application/ShopDemo.Catalog.Application.csproj", "ShopDemo.Catalog.Application/"]
-COPY ["Catalog/ShopDemo.Catalog.Infraestructure/ShopDemo.Catalog.Infraestructure.csproj", "ShopDemo.Catalog.Infraestructure/"]
-COPY ["Catalog/ShopDemo.Catalog.Domain/ShopDemo.Catalog.Domain.csproj", "ShopDemo.Catalog.Domain/"]
+COPY ["Catalog/ShopDemo.Catalog.Api/ShopDemo.Catalog.Api.csproj", "Catalog/ShopDemo.Catalog.Api/"]
+COPY ["Catalog/ShopDemo.Catalog.Application/ShopDemo.Catalog.Application.csproj", "Catalog/ShopDemo.Catalog.Application/"]
+COPY ["Catalog/ShopDemo.Catalog.Infraestructure/ShopDemo.Catalog.Infraestructure.csproj", "Catalog/ShopDemo.Catalog.Infraestructure/"]
+COPY ["Catalog/ShopDemo.Catalog.Domain/ShopDemo.Catalog.Domain.csproj", "Catalog/ShopDemo.Catalog.Domain/"]
 
 # Este se queda igual en la raíz de /src
 COPY ["ShopDemo.Shared/ShopDemo.Shared.csproj", "ShopDemo.Shared/"]
