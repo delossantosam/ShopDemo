@@ -11,7 +11,7 @@ COPY ["Orders/ShopDemo.Orders.Api/ShopDemo.Orders.Api.csproj", "ShopDemo.Orders.
 COPY ["Orders/ShopDemo.Orders.Application/ShopDemo.Orders.Application.csproj", "ShopDemo.Orders.Application/"]
 COPY ["Orders/ShopDemo.Orders.Infraestructure/ShopDemo.Orders.Infraestructure.csproj", "ShopDemo.Orders.Infraestructure/"]
 COPY ["Orders/ShopDemo.Orders.Domain/ShopDemo.Orders.Domain.csproj", "ShopDemo.Orders.Domain/"]
-COPY ["Orders/ShopDemo.Shared/ShopDemo.Shared.csproj", "ShopDemo.Shared/"]
+COPY ["ShopDemo.Shared/ShopDemo.Shared.csproj", "ShopDemo.Shared/"]
 
 RUN dotnet restore "ShopDemo.Orders.Api/ShopDemo.Orders.Api.csproj"
 
