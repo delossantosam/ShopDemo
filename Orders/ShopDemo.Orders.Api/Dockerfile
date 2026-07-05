@@ -13,7 +13,7 @@ COPY ["Orders/ShopDemo.Orders.Infraestructure/ShopDemo.Orders.Infraestructure.cs
 COPY ["Orders/ShopDemo.Orders.Domain/ShopDemo.Orders.Domain.csproj", "ShopDemo.Orders.Domain/"]
 COPY ["ShopDemo.Shared/ShopDemo.Shared.csproj", "ShopDemo.Shared/"]
 
-RUN dotnet restore "ShopDemo.Orders.Api/ShopDemo.Orders.Api.csproj"
+RUN dotnet restore "Orders/ShopDemo.Orders.Api/ShopDemo.Orders.Api.csproj"
 
 COPY . .
 WORKDIR "/src/ShopDemo.Orders.Api"
