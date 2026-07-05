@@ -50,19 +50,25 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Configure AWS credentials (OIDC)
-        if: ${{ secrets.AWS_ROLE_ARN != '' }}
+        # Usamos env. para validar si el secreto existe
+        if: env.AWS_ROLE_ARN != ''
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
+        env:
+          AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
 
       - name: Configure AWS credentials (access key)
-        if: ${{ secrets.AWS_ROLE_ARN == '' }}
+        # Si el entorno está vacío, cae en este paso tradicional
+        if: env.AWS_ROLE_ARN == ''
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
+        env:
+          AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
 
       - name: Login to Amazon ECR
         id: ecr
