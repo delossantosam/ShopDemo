@@ -35,16 +35,16 @@ jobs:
             ecs_service: shopdemo-catalog-service-3yhw98kg
           - dockerfile: Orders/ShopDemo.Orders.Api/Dockerfile
             repository: shopdemo-orders
-            ecs_service: shopdemo-orders
+            ecs_service: shopdemo-orders-service-up5tsy12
           - dockerfile: Inventory/ShopDemo.Inventory.Api/Dockerfile
             repository: shopdemo-inventory
             ecs_service: shopdemo-inventory-service-4fpp6sv3
           - dockerfile: Aspire/ShopDemo.Analytics.Api/Dockerfile
             repository: shopdemo-analytics
-            ecs_service: shopdemo-analytics
+            ecs_service: shopdemo-analytics-service-zhgoggba
           - dockerfile: AI/ShopDemo.Mcp.Api/Dockerfile
             repository: shopdemo-mcp
-            ecs_service: shopdemo-mcp
+            ecs_service: shopdemo-mcp-service-9c4d2e1z
 
     steps:
       - uses: actions/checkout@v4
