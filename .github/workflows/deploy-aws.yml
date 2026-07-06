@@ -32,7 +32,7 @@ jobs:
         include:
           - dockerfile: Catalog/ShopDemo.Catalog.Api/Dockerfile
             repository: shopdemo-catalog
-            ecs_service: shopdemo-catalog
+            ecs_service: shopdemo-catalog-service-3yhw98kg
           - dockerfile: Orders/ShopDemo.Orders.Api/Dockerfile
             repository: shopdemo-orders
             ecs_service: shopdemo-orders
