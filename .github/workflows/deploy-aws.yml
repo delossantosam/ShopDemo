@@ -38,7 +38,7 @@ jobs:
             ecs_service: shopdemo-orders
           - dockerfile: Inventory/ShopDemo.Inventory.Api/Dockerfile
             repository: shopdemo-inventory
-            ecs_service: shopdemo-inventory
+            ecs_service: shopdemo-inventory-service-4fpp6sv3
           - dockerfile: Aspire/ShopDemo.Analytics.Api/Dockerfile
             repository: shopdemo-analytics
             ecs_service: shopdemo-analytics
